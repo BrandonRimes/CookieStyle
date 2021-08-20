@@ -1,1 +1,1 @@
-# CookieStyle
+# Cookie Stand Tycoon
