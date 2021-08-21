@@ -5,6 +5,7 @@ import ReportTable from './components/report-table';
 import Footer from './components/footer';
 import { hours } from './data';
 import './App.css';
+import Cursor from './Cursor';
 
 class App extends Component {
 
@@ -18,18 +19,18 @@ class App extends Component {
   handleCreate = (standData) => {
     const standReports = [...this.state.standReports, standData];
     this.setState({ standReports });
-  }
+  };
 
   render() {
     return (
-      <div id="body" onMouseMove={this.handleMouse}>
+      <div id="body" >
         <Header />
         <main>
           <CreateForm onCreate={this.handleCreate} />
           <ReportTable hours={hours} reports={this.state.standReports} />
         </main>
         <Footer reports={this.state.standReports} />
-        <div id="cursor"></div>
+        <Cursor />
       </div >
     );
   }
