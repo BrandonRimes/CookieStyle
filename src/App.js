@@ -1,9 +1,10 @@
-import { Component } from 'react'
-import Header from './components/header'
-import CreateForm from './components/create-form'
-import ReportTable from './components/report-table'
-import Footer from './components/footer'
-import { hours } from './data'
+import { Component } from 'react';
+import Header from './components/header';
+import CreateForm from './components/create-form';
+import ReportTable from './components/report-table';
+import Footer from './components/footer';
+import { hours } from './data';
+import './App.css';
 
 class App extends Component {
 
@@ -11,7 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
       standReports: []
-    }
+    };
   }
 
   handleCreate = (standData) => {
@@ -21,13 +22,14 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div id="body" onMouseMove={this.handleMouse}>
         <Header />
         <main>
           <CreateForm onCreate={this.handleCreate} />
           <ReportTable hours={hours} reports={this.state.standReports} />
         </main>
         <Footer reports={this.state.standReports} />
+        <div id="cursor"></div>
       </div >
     );
   }
