@@ -56,6 +56,10 @@ form {
   background-color: white;
 }
 
+legend {
+  margin: 6px 0;
+}
+
 fieldset {
   /* height: 25px; */
   border: none;
@@ -69,7 +73,7 @@ input {
   text-align: center;
   border: none;
   margin: 1px;
-  box-shadow: 0px 0px 2px black;
+  box-shadow: 1px 1px 0px black;
 }
 
 input:focus {
@@ -135,6 +139,7 @@ table,
   border-radius: 30px;
   box-shadow: inset 0px 2px 3px black;
   padding: 10px;
+  background-color: white;
 }
 
 table {
@@ -142,7 +147,6 @@ table {
   max-width: 70vw;
   max-height: 35vh;
   overflow: scroll;
-  background-color: white;
 }
 
 thead {
